@@ -8,7 +8,7 @@ class CustomUserManager(BaseUserManager):
         email = self.normalize_email(email)
         user = self.model(email=email, employee_name=employee_name, employee_code=employee_code, is_active=is_active, is_admin=is_admin, **extra_fields)
         if password:
-            user.set_password(password)  # Set password using set_password method
+            user.set_password(password) 
         user.save(using=self._db)
         return user
 
@@ -51,6 +51,7 @@ class Employee(models.Model):
     check_out = models.DateTimeField(null=True, blank=True)
     is_active = models.BooleanField(default=None, null=True, blank=True)
     is_working_from_home = models.BooleanField(default=False)
+    created_date = models.DateField(default=None,null=True, blank=True)
 
     def __str__(self):
         try:

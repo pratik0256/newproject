@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 from .serializers import UserSerializer
 from .serializers import AdminLoginSerializer
 from .serializers import EmployeeUpdateSerializer
+from datetime import datetime
 
 class RegisterView(generics.CreateAPIView):
     queryset = CustomUser.objects.all()
@@ -18,14 +19,11 @@ class TokenObtainView(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
         email = request.data.get('email')
         password = request.data.get('password')
-
         user = CustomUser.objects.filter(email=email).first()
-
         if user is None or not user.check_password(password):
             return Response({'error': 'Invalid email or password'}, status=status.HTTP_401_UNAUTHORIZED)
-
         refresh = RefreshToken.for_user(user)
-
+       
         return Response({
             'refresh': str(refresh),
             'access': str(refresh.access_token),
@@ -35,29 +33,25 @@ class LoginView(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
         email = request.data.get('email')
         password = request.data.get('password')
-        token = request.data.get('token')
-        print(email)
-        print(password)
-        if token:
-            try:
-                token = RefreshToken(token)
-                user_id = token.payload['user_id']
-                user = CustomUser.objects.get(id=user_id)
-                return Response({'message': 'Login successful', 'user': CustomUserSerializer(user).data})
-            except Exception as e:
-                return Response({'error': 'Invalid token'}, status=status.HTTP_401_UNAUTHORIZED)
-        
+
         if email and password:
             user = CustomUser.objects.filter(email=email).first()
             if user is None:
                 return Response({'error': 'User does not exist'}, status=status.HTTP_404_NOT_FOUND)
             if not user.check_password(password):
                 return Response({'error': 'Invalid password'}, status=status.HTTP_401_UNAUTHORIZED)
-            return Response({'message': 'Login successful', 'user': CustomUserSerializer(user).data})
-        
+
+            refresh = RefreshToken.for_user(user)
+            access_token = str(refresh.access_token)
+
+            return Response({
+                'message': 'Login successful',
+                'user': CustomUserSerializer(user).data,
+                'refresh': str(refresh),
+                'access_token': access_token
+            })
+
         return Response({'error': 'Invalid request'}, status=status.HTTP_400_BAD_REQUEST)
-
-
 
 @api_view(['POST'])
 def create_employee(request):
@@ -86,55 +80,85 @@ def admin_login(request):
             return Response(serializer.validated_data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-from datetime import datetime
+
+
+from .serializers import EmployeeSerializer
+from datetime import datetime, date
+from collections import defaultdict
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
-from .models import Employee  # Assuming you have defined your Employee model
-from .serializers import EmployeeSerializer  # Assuming you have defined your EmployeeSerializer
 from rest_framework import status
+from .models import Employee
+from .serializers import EmployeeSerializer
 
-@api_view(['GET'])
-def get_all_employee_details(request):
-    if request.method == 'GET':
-        employees = Employee.objects.all()
-        serializer = EmployeeSerializer(employees, many=True)
+# @api_view(['GET'])
+# def get_all_employee_details(request):
+#     if request.method == 'GET':
+#         # Fetch all employees
+#         employees = Employee.objects.all()
+#         serializer = EmployeeSerializer(employees, many=True)
+#         employees_with_hours = defaultdict(lambda: defaultdict(float))
 
-        employees_with_hours = {}
+#         # Initialize a set to store registered users
+#         registered_users = set(entry["user_name"] for entry in serializer.data)
 
-        for entry in serializer.data:  # Iterate over serialized data
-            user_name = entry["user_name"]
-            check_in_time = datetime.fromisoformat(entry["check_in"][:-1])  # Removing 'Z' at the end
-            check_out_time = datetime.fromisoformat(entry["check_out"][:-1])  # Removing 'Z' at the end
-            duration = (check_out_time - check_in_time).total_seconds() / 3600  # Convert seconds to hours
+#         # Iterate over each employee to calculate working hours
+#         for entry in serializer.data: 
+#             user_name = entry["user_name"]
+#             check_in = entry.get("check_in", None)
+#             check_out = entry.get("check_out", None)
 
-            if user_name in employees_with_hours:
-                # If user name already exists, add the duration to existing working hours
-                employees_with_hours[user_name]["working_hours"] += duration
-            else:
-                # If user name is encountered for the first time, create a new entry
-                employees_with_hours[user_name] = {"working_hours": duration}
+#             if user_name in registered_users:
+#                 if check_in and check_out:  # If both check-in and check-out data exist
+#                     check_in_time = datetime.fromisoformat(check_in[:-1])
+#                     check_out_time = datetime.fromisoformat(check_out[:-1])
+#                     date_key = check_in_time.date()
 
-        print("Employees with their working hours:", employees_with_hours)
+#                     duration = (check_out_time - check_in_time).total_seconds() / 3600
+#                     employees_with_hours[user_name][date_key] += duration
+#                 else:
+#                     # If either check-in or check-out data is missing, mark the employee as absent
+#                     date_key = datetime.now().date()  # Use current date as key
+#                     employees_with_hours[user_name][date_key] = 0
 
-        response_data = {}
+#         # Fetch all users from CustomUser model
+#         users = CustomUser.objects.all()
 
-        for user_name, data in employees_with_hours.items():
-            working_hours = data["working_hours"]
-            if working_hours >= 8:
-                response_data[user_name] = {
-                    "working_hours": working_hours,
-                    "attendance": "Full day"
-                }
-            else:
-                response_data[user_name] = {
-                    "working_hours": working_hours,
-                    "attendance": "Half day"
-                }
+#         # Iterate over each user to check if they are registered as an employee
+#         for user in users:
+#             user_name = user.name  # Assuming 'name' is the attribute in CustomUser model
+#             if user_name not in employees_with_hours:
+#         # If the user is not present in the Employee model, mark them as absent
+#                 employees_with_hours[user_name] = {datetime.now().date(): 0}
 
-        return Response({"employees_with_hours": response_data}, status=status.HTTP_200_OK)
+#         # Prepare response data
+#         response_data = {}
+#         for user_name, date_hours in employees_with_hours.items():
+#             user_data = []
+#             for date_key, working_hours in date_hours.items():
+#                 if working_hours == 0:
+#                     user_data.append({
+#                         "date": date_key.strftime("%Y-%m-%d"),
+#                         "working_hours": working_hours,
+#                         "attendance": "Absent",
+#                     })
+#                 elif working_hours >= 8:
+#                     user_data.append({
+#                         "date": date_key.strftime("%Y-%m-%d"),
+#                         "working_hours": working_hours,
+#                         "attendance": "Full day",
+#                     })
+#                 elif working_hours < 8:
+#                     user_data.append({
+#                         "date": date_key.strftime("%Y-%m-%d"),
+#                         "working_hours": working_hours,
+#                         "attendance": "Half day",
+#                     })
+#             response_data[user_name] = user_data
+
+#         return Response(response_data, status=status.HTTP_200_OK)
 
 
-    
+
     
 # views.py
 from rest_framework import status
@@ -144,26 +168,54 @@ from .models import Employee
 
 from rest_framework.permissions import IsAdminUser
 
+from django.contrib.auth.models import User
+
+# @api_view(['GET'])
+# def get_employee_details(request, employee_id=None):
+#     user = request.user
+#     try:
+#         if employee_id:
+#             user = Employee.objects.get(pk=employee_id).user.id
+#             employee = Employee.objects.filter(user=user)
+#             print(employee)
+#         else:
+#             employee = Employee.objects.get(user=user)
+#     except Employee.DoesNotExist:
+#         return Response({'message': 'Employee not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+#     if request.method == 'GET':
+#         serializer = EmployeeSerializer(employee, many = True)
+#         return Response(serializer.data, status=status.HTTP_200_OK)
+
 @api_view(['GET'])
-# @permission_classes([IsAdminUser])
-def get_employee_details(request, employee_id):
+def get_employee_details(request):
+    user = request.GET.get('user')
+    print(user)
     try:
-        employee = Employee.objects.get(pk=employee_id)
+        if user:
+            employee = Employee.objects.filter(user=user)
+            print(employee)
+        else:
+            employee = Employee.objects.get(user=user)
     except Employee.DoesNotExist:
         return Response({'message': 'Employee not found.'}, status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = EmployeeSerializer(employee)
+        serializer = EmployeeSerializer(employee, many = True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 
+
 @api_view(['PATCH'])
-# @permission_classes([IsAdminUser])
-def update_employee_active_status(request, employee_id):
+def update_employee_active_status(request):
+    user = request.query_params.get('user')
     try:
-        employee = Employee.objects.get(pk=employee_id)
+        employee = Employee.objects.filter(user=user).first()
     except Employee.DoesNotExist:
+        return Response({'message': 'Employee not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    if not employee:
         return Response({'message': 'Employee not found.'}, status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'PATCH':
@@ -172,6 +224,127 @@ def update_employee_active_status(request, employee_id):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+from datetime import timedelta, date
+from collections import defaultdict
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.decorators import api_view
+from .models import Employee
+from .serializers import EmployeeSerializer
 
+def get_all_checkin_checkout_times():
+    employees_times = Employee.objects.all().values('user__employee_name', 'check_in', 'check_out')
+    return employees_times
 
+def filter_weekday_dates(employees_times, weekday_dates):
+    weekday_dates_set = set(weekday_dates)
+    filtered_times = [
+        entry for entry in employees_times if entry['check_in'].date() in weekday_dates_set
+    ]
+    return filtered_times
 
+def get_weekday_dates(start_date, end_date):
+    all_dates = [start_date + timedelta(days=x) for x in range((end_date - start_date).days + 1)]
+    filtered_dates = [d for d in all_dates if d.weekday() < 5]
+    return filtered_dates
+
+@api_view(['GET'])
+def get_all_employee_details(request):
+    if request.method == 'GET':
+        # Retrieve all employees
+        employees = Employee.objects.all()
+        #print('employees------------',employees)
+        users = CustomUser.objects.all()
+       # print('users---------', users)
+        for user in users:
+            print('user-------------------',user)
+            employees = Employee.objects.filter(user=user)
+            print('employees--------------------------',employees)
+        serializer = EmployeeSerializer(employees, many=True)
+        
+        # Initialize response data
+        response_data = defaultdict(list)
+
+        # Get all check-in and check-out times
+        employees_times = get_all_checkin_checkout_times()
+        
+        # Get weekday dates
+        weekday_dates = get_weekday_dates(min([entry['check_in'] for entry in employees_times]), 
+                                           max([entry['check_in'] for entry in employees_times]))
+        
+        # Filter check-in and check-out times for weekday dates
+        filtered_times = filter_weekday_dates(employees_times, weekday_dates)
+        
+        # Calculate working hours for each employee
+        employees_with_hours = defaultdict(lambda: defaultdict(float))
+        for entry in serializer.data:
+            user_name = entry["user_name"]
+            check_in = entry.get("check_in", None)
+            check_out = entry.get("check_out", None)
+            if check_in and check_out:
+                check_in_time = datetime.fromisoformat(check_in[:-1])
+                check_out_time = datetime.fromisoformat(check_out[:-1])
+                date_key = check_in_time.date()
+                duration = (check_out_time - check_in_time).total_seconds() / 3600
+                employees_with_hours[user_name][date_key] += duration
+        
+        # Retrieve email addresses from the database
+        email_addresses = [entry['email'] for entry in CustomUser.objects.all().values('email')]
+        
+        # Generate response data for each user
+        for email in email_addresses:
+            user_data = []
+            for date_key in weekday_dates:
+                working_hours = employees_with_hours.get(email, {}).get(date_key, 0)
+                if working_hours == 0:
+                    user_data.append({
+                        "date": date_key.strftime("%Y-%m-%d"),
+                        "working_hours": working_hours,
+                        "attendance": "Absent",
+                    })
+            response_data[email] = user_data
+        response_data1 = defaultdict(list)
+        
+        # Include present data for each user
+        for user_name, date_hours in employees_with_hours.items():
+            user_data = []
+            for date_key, working_hours in date_hours.items():
+                if working_hours != 0:
+                    attendance = "Full day" if working_hours >= 8 else "Half day"
+                    user_data.append({
+                        "date": date_key.strftime("%Y-%m-%d"),
+                        "working_hours": round(working_hours, 2),
+                        "attendance": attendance,
+                    })
+            response_data1[email] += user_data 
+        # print(response_data,"response----------------------------")
+        # print(response_data1,"responsedata1----------------------------")
+        
+# Create a new dictionary to store the merged values
+    merged_response = defaultdict(list)
+
+# Add values from response to merged_response
+    for key, value in response_data.items():
+        merged_response[key].extend(value)
+
+# Add values from response1 to merged_response
+    for key, value in response_data1.items():
+        merged_response[key].extend(value)
+
+# Get the keys that are only present in response or response1
+    unique_keys_response = set(response_data.keys())
+    unique_keys_response1 = set(response_data1.keys())
+    unique_keys = unique_keys_response.symmetric_difference(unique_keys_response1)
+
+# Add values for keys that are only present in response or response1 to merged_response
+    for key in unique_keys:
+        if key in response_data:
+            merged_response[key].extend(response_data[key])
+        elif key in response_data1:
+            merged_response[key].extend(response_data1[key])
+
+    #print(dict(merged_response))
+        
+        
+    return Response(merged_response, status=status.HTTP_200_OK)

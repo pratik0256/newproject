@@ -5,9 +5,6 @@ from .models import Employee
 from rest_framework_simplejwt.tokens import RefreshToken
 
 
-from rest_framework import serializers
-from .models import CustomUser
-
 class CustomUserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
 
@@ -33,10 +30,13 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Employee
-        fields = ['id', 'user', 'user_name', 'check_in', 'check_out', 'is_active', 'is_working_from_home']
+        fields = [ 'id', 'user', 'user_name', 'check_in', 'check_out', 'is_active', 'is_working_from_home']
 
     def get_user_name(self, obj):
         return obj.user.employee_name  
+    
+    def create(self, validated_data):
+        return Employee.objects.create(**validated_data)
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
