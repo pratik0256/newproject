@@ -348,3 +348,77 @@ def get_all_employee_details(request):
         
         
     return Response(merged_response, status=status.HTTP_200_OK)
+
+
+##________Excel___________
+from rest_framework import generics, status
+from rest_framework.response import Response
+from .models import CustomUser , Employee
+from .serializers import CustomUserSerializer , EmployeeSerializer
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAdminUser
+from django.contrib.auth.models import User
+from .serializers import UserSerializer
+from .serializers import AdminLoginSerializer
+from .serializers import EmployeeUpdateSerializer
+import pandas as pd
+from django.http import HttpResponse
+from django.views import View
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+from io import BytesIO
+from .models import Employee
+from datetime import timedelta
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class DownloadAttendance(View):
+    def get(self, request):
+        # Retrieve attendance data from your database
+        employees = Employee.objects.all()
+        
+        # Create a dictionary to store attendance data organized by user and date
+        user_data = {}
+        for employee in employees:
+            user = employee.user.employee_name
+            date = employee.check_in.date().strftime('%d/%m/%Y')
+            # Calculate the duration between check-in and check-out
+            duration = employee.check_out - employee.check_in
+            # Determine status based on duration
+            if duration < timedelta(hours=8):
+                status = 'Half Day'
+            else:
+                status = 'Present'
+            if user not in user_data:
+                user_data[user] = {}
+            user_data[user][date] = status
+        
+        # Convert the dictionary to DataFrame
+        df = pd.DataFrame(user_data)
+
+        # Transpose the DataFrame to have users as rows and dates as columns
+        df = df.transpose()
+
+        # Mark all dates other than "Half Day" and "Present" as "Absent"
+        for user in df.index:
+            for column in df.columns:
+                if pd.isna(df.loc[user, column]):
+                    df.loc[user, column] = 'Absent'
+
+        # Create BytesIO object to store Excel file as bytes
+        output = BytesIO()
+
+        # Create Excel writer object
+        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+            # Write DataFrame to Excel
+            df.to_excel(writer, sheet_name='Attendance')
+
+        # Set the BytesIO object's cursor to the beginning
+        output.seek(0)
+
+        # Create HttpResponse object with the Excel file bytes
+        response = HttpResponse(output.getvalue(), content_type='application/vnd.ms-excel')
+        response['Content-Disposition'] = 'attachment; filename=attendance.xlsx'
+        
+        return response

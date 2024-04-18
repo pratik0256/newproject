@@ -1,0 +1,27 @@
+INFO 2024-04-18 16:11:04,333 MainThread 8892 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 66584 Watching for file changes with StatReloader
+INFO 2024-04-18 16:12:09,231 MainThread 70612 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 15468 Watching for file changes with StatReloader
+INFO 2024-04-18 16:14:36,522 MainThread 70612 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 15468 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-18 16:14:37,205 MainThread 73120 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 78320 Watching for file changes with StatReloader
+INFO 2024-04-18 16:15:22,518 MainThread 43712 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 59500 Watching for file changes with StatReloader
+INFO 2024-04-18 16:15:34,586 Thread-1 (process_request_thread) 55120 basehttp basehttp.py 212 django.server log_message 59500 "GET /api/admin/employees/ HTTP/1.1" 200 3198
+INFO 2024-04-18 16:16:17,105 MainThread 43712 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 59500 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-18 16:16:17,934 MainThread 68252 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 72952 Watching for file changes with StatReloader
+INFO 2024-04-18 16:16:51,140 MainThread 68252 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 72952 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-18 16:16:51,898 MainThread 51416 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 68800 Watching for file changes with StatReloader
+INFO 2024-04-18 16:16:55,048 MainThread 51416 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 68800 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-18 16:16:55,751 MainThread 72176 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 70448 Watching for file changes with StatReloader
+INFO 2024-04-18 16:19:35,452 MainThread 66524 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 67212 Watching for file changes with StatReloader
+ERROR 2024-04-18 16:20:04,937 Thread-1 (process_request_thread) 73204 basehttp basehttp.py 212 django.server log_message 67212 "GET /api/download-attendance/ HTTP/1.1" 500 96993
+WARNING 2024-04-18 16:20:37,168 Thread-1 (process_request_thread) 73204 basehttp basehttp.py 212 django.server log_message 67212 "POST /api/download-attendance/ HTTP/1.1" 405 0
+ERROR 2024-04-18 16:20:44,903 Thread-1 (process_request_thread) 73204 basehttp basehttp.py 212 django.server log_message 67212 "GET /api/download-attendance/ HTTP/1.1" 500 96993
+ERROR 2024-04-18 16:21:50,649 Thread-1 (process_request_thread) 73204 basehttp basehttp.py 212 django.server log_message 67212 "GET /api/download-attendance/ HTTP/1.1" 500 96993
+INFO 2024-04-18 16:23:40,471 Thread-2 (process_request_thread) 70984 basehttp basehttp.py 212 django.server log_message 67212 "POST /api/login/ HTTP/1.1" 200 620
+WARNING 2024-04-18 16:23:44,173 Thread-1 (process_request_thread) 73204 basehttp basehttp.py 212 django.server log_message 67212 "POST /api/register/ HTTP/1.1" 400 129
+INFO 2024-04-18 16:23:48,535 Thread-1 (process_request_thread) 73204 basehttp basehttp.py 212 django.server log_message 67212 "POST /api/employees/ HTTP/1.1" 201 161
+INFO 2024-04-18 16:23:51,813 Thread-1 (process_request_thread) 73204 basehttp basehttp.py 212 django.server log_message 67212 "PATCH /api/admin/employees/update_active_status/?user=8 HTTP/1.1" 200 18
+INFO 2024-04-18 16:23:54,824 Thread-1 (process_request_thread) 73204 basehttp basehttp.py 212 django.server log_message 67212 "GET /api/admin/employees/ HTTP/1.1" 200 3198
+INFO 2024-04-18 16:24:00,621 Thread-2 (process_request_thread) 70984 basehttp basehttp.py 212 django.server log_message 67212 "GET /api/admin/employee/?user=8 HTTP/1.1" 200 1623
+INFO 2024-04-18 17:17:57,864 MainThread 64380 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 76308 Watching for file changes with StatReloader
+ERROR 2024-04-18 17:18:03,370 Thread-1 (process_request_thread) 69200 basehttp basehttp.py 212 django.server log_message 76308 "GET /api/download-attendance/ HTTP/1.1" 500 97037
+INFO 2024-04-18 17:28:26,423 MainThread 66532 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 70756 Watching for file changes with StatReloader
+INFO 2024-04-18 17:28:31,528 Thread-1 (process_request_thread) 11940 basehttp basehttp.py 212 django.server log_message 70756 "GET /api/download-attendance/ HTTP/1.1" 200 5552

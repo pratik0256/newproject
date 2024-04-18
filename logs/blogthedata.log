@@ -1,0 +1,107 @@
+ERROR 2024-04-18 16:20:04,934 log log.py 241 log_response Internal Server Error: /api/download-attendance/
+Traceback (most recent call last):
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\newproject\attendanceSystem\app\views.py", line 413, in get
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 197, in __init__
+    from xlsxwriter import Workbook
+ModuleNotFoundError: No module named 'xlsxwriter'
+WARNING 2024-04-18 16:20:37,167 base base.py 146 http_method_not_allowed Method Not Allowed (POST): /api/download-attendance/
+WARNING 2024-04-18 16:20:37,168 log log.py 241 log_response Method Not Allowed: /api/download-attendance/
+ERROR 2024-04-18 16:20:44,901 log log.py 241 log_response Internal Server Error: /api/download-attendance/
+Traceback (most recent call last):
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\newproject\attendanceSystem\app\views.py", line 413, in get
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 197, in __init__
+    from xlsxwriter import Workbook
+ModuleNotFoundError: No module named 'xlsxwriter'
+ERROR 2024-04-18 16:21:50,648 log log.py 241 log_response Internal Server Error: /api/download-attendance/
+Traceback (most recent call last):
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\newproject\attendanceSystem\app\views.py", line 413, in get
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 197, in __init__
+    from xlsxwriter import Workbook
+ModuleNotFoundError: No module named 'xlsxwriter'
+WARNING 2024-04-18 16:23:44,172 log log.py 241 log_response Bad Request: /api/register/
+ERROR 2024-04-18 17:18:03,367 log log.py 241 log_response Internal Server Error: /api/download-attendance/
+Traceback (most recent call last):
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\New folder\newproject\attendanceSystem\app\views.py", line 413, in get
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\chrome_extension\myenv\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 197, in __init__
+    from xlsxwriter import Workbook
+ModuleNotFoundError: No module named 'xlsxwriter'
