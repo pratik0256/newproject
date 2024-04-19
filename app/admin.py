@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import CustomUser , Employee 
+from .models import CustomUser, Employee
 
-admin.site.register(CustomUser)
-admin.site.register(Employee)
+class CustomUserAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in CustomUser._meta.fields]
+
+admin.site.register(CustomUser, CustomUserAdmin)
+
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Employee._meta.fields]
+
+admin.site.register(Employee, EmployeeAdmin)

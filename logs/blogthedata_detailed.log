@@ -25,3 +25,380 @@ INFO 2024-04-18 17:17:57,864 MainThread 64380 autoreload autoreload.py 668 djang
 ERROR 2024-04-18 17:18:03,370 Thread-1 (process_request_thread) 69200 basehttp basehttp.py 212 django.server log_message 76308 "GET /api/download-attendance/ HTTP/1.1" 500 97037
 INFO 2024-04-18 17:28:26,423 MainThread 66532 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 70756 Watching for file changes with StatReloader
 INFO 2024-04-18 17:28:31,528 Thread-1 (process_request_thread) 11940 basehttp basehttp.py 212 django.server log_message 70756 "GET /api/download-attendance/ HTTP/1.1" 200 5552
+INFO 2024-04-19 11:09:15,101 MainThread 53244 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 51820 Watching for file changes with StatReloader
+INFO 2024-04-19 11:47:25,358 MainThread 53244 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 51820 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 11:49:31,838 MainThread 56520 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 77224 Watching for file changes with StatReloader
+ERROR 2024-04-19 11:50:55,517 Thread-1 (process_request_thread) 55680 basehttp basehttp.py 212 django.server log_message 77224 "GET /api/admin/employees/ HTTP/1.1" 500 108870
+INFO 2024-04-19 11:51:45,886 Thread-2 (process_request_thread) 72720 basehttp basehttp.py 212 django.server log_message 77224 "GET /admin/auth/user/ HTTP/1.1" 302 0
+INFO 2024-04-19 11:52:02,518 Thread-3 (process_request_thread) 20712 basehttp basehttp.py 212 django.server log_message 77224 "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-04-19 11:52:27,161 Thread-2 (process_request_thread) 72720 basehttp basehttp.py 81 django.server handle_error 77224 - Broken pipe from ('127.0.0.1', 49383)
+INFO 2024-04-19 11:52:27,162 Thread-3 (process_request_thread) 20712 basehttp basehttp.py 212 django.server log_message 77224 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4162
+INFO 2024-04-19 11:52:27,212 Thread-3 (process_request_thread) 20712 basehttp basehttp.py 212 django.server log_message 77224 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-04-19 11:52:27,228 Thread-3 (process_request_thread) 20712 basehttp basehttp.py 212 django.server log_message 77224 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-04-19 11:52:27,229 Thread-4 (process_request_thread) 44100 basehttp basehttp.py 212 django.server log_message 77224 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-04-19 11:52:27,247 Thread-5 (process_request_thread) 70804 basehttp basehttp.py 212 django.server log_message 77224 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-04-19 11:52:27,249 Thread-6 (process_request_thread) 41332 basehttp basehttp.py 212 django.server log_message 77224 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:52:27,251 Thread-7 (process_request_thread) 54516 basehttp basehttp.py 212 django.server log_message 77224 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:52:32,282 MainThread 72260 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 40308 Watching for file changes with StatReloader
+INFO 2024-04-19 11:52:44,046 Thread-1 (process_request_thread) 53688 basehttp basehttp.py 212 django.server log_message 40308 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4321
+INFO 2024-04-19 11:52:56,391 Thread-1 (process_request_thread) 53688 basehttp basehttp.py 212 django.server log_message 40308 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-04-19 11:52:56,476 Thread-1 (process_request_thread) 53688 basehttp basehttp.py 212 django.server log_message 40308 "GET /admin/ HTTP/1.1" 200 10780
+INFO 2024-04-19 11:52:56,519 Thread-1 (process_request_thread) 53688 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2024-04-19 11:52:56,538 Thread-2 (process_request_thread) 71124 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:52:56,538 Thread-1 (process_request_thread) 53688 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:52:56,539 Thread-3 (process_request_thread) 49884 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,291 Thread-3 (process_request_thread) 49884 basehttp basehttp.py 212 django.server log_message 40308 "GET /admin/auth/user/ HTTP/1.1" 200 12108
+INFO 2024-04-19 11:53:20,324 Thread-3 (process_request_thread) 49884 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,342 Thread-3 (process_request_thread) 49884 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,346 Thread-2 (process_request_thread) 71124 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,347 Thread-4 (process_request_thread) 77088 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,350 Thread-5 (process_request_thread) 72200 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,351 Thread-6 (process_request_thread) 67608 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,353 Thread-3 (process_request_thread) 49884 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,359 Thread-1 (process_request_thread) 53688 basehttp basehttp.py 212 django.server log_message 40308 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:53:20,361 Thread-2 (process_request_thread) 71124 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,364 Thread-4 (process_request_thread) 77088 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,366 Thread-3 (process_request_thread) 49884 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,366 Thread-6 (process_request_thread) 67608 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,383 Thread-3 (process_request_thread) 49884 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,411 Thread-4 (process_request_thread) 77088 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,411 Thread-3 (process_request_thread) 49884 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:20,411 Thread-6 (process_request_thread) 67608 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:23,314 Thread-6 (process_request_thread) 67608 basehttp basehttp.py 212 django.server log_message 40308 "GET /admin/auth/user/ HTTP/1.1" 200 12108
+INFO 2024-04-19 11:53:23,345 Thread-6 (process_request_thread) 67608 basehttp basehttp.py 212 django.server log_message 40308 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:53:28,722 Thread-6 (process_request_thread) 67608 basehttp basehttp.py 212 django.server log_message 40308 "GET /admin/app/customuser/ HTTP/1.1" 200 10693
+INFO 2024-04-19 11:53:28,772 Thread-6 (process_request_thread) 67608 basehttp basehttp.py 212 django.server log_message 40308 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:53:46,943 Thread-6 (process_request_thread) 67608 basehttp basehttp.py 212 django.server log_message 40308 "GET /admin/app/customuser/10/change/ HTTP/1.1" 200 13471
+INFO 2024-04-19 11:53:46,996 Thread-2 (process_request_thread) 71124 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:46,997 Thread-1 (process_request_thread) 53688 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:46,997 Thread-4 (process_request_thread) 77088 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:53:47,008 Thread-3 (process_request_thread) 49884 basehttp basehttp.py 212 django.server log_message 40308 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:55:50,638 MainThread 72260 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 40308 D:\New folder\newproject\attendanceSystem\app\admin.py changed, reloading.
+INFO 2024-04-19 11:56:23,236 Thread-6 (process_request_thread) 67608 basehttp basehttp.py 212 django.server log_message 40308 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2024-04-19 11:56:28,364 MainThread 71984 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 568 Watching for file changes with StatReloader
+INFO 2024-04-19 11:56:30,996 Thread-1 (process_request_thread) 63976 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/ HTTP/1.1" 200 10780
+INFO 2024-04-19 11:56:37,726 Thread-1 (process_request_thread) 63976 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/customuser/ HTTP/1.1" 200 13945
+INFO 2024-04-19 11:56:37,831 Thread-1 (process_request_thread) 63976 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:56:37,972 Thread-3 (process_request_thread) 76352 basehttp basehttp.py 212 django.server log_message 568 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2024-04-19 11:56:37,976 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO 2024-04-19 11:56:53,412 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/customuser/10/change/ HTTP/1.1" 200 13471
+INFO 2024-04-19 11:56:53,466 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:56:53,467 Thread-3 (process_request_thread) 76352 basehttp basehttp.py 212 django.server log_message 568 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2024-04-19 11:56:53,479 Thread-3 (process_request_thread) 76352 basehttp basehttp.py 212 django.server log_message 568 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:56:53,553 Thread-3 (process_request_thread) 76352 basehttp basehttp.py 212 django.server log_message 568 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:56:53,553 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2024-04-19 11:56:59,396 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/customuser/ HTTP/1.1" 200 13945
+INFO 2024-04-19 11:57:01,258 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/customuser/9/change/ HTTP/1.1" 200 13464
+INFO 2024-04-19 11:57:01,293 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:57:05,500 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/customuser/ HTTP/1.1" 200 13945
+INFO 2024-04-19 11:57:13,448 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/employee/ HTTP/1.1" 200 25001
+INFO 2024-04-19 11:57:13,485 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:57:22,956 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "POST /admin/app/employee/ HTTP/1.1" 200 8829
+INFO 2024-04-19 11:57:22,992 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2024-04-19 11:57:24,452 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "POST /admin/app/employee/ HTTP/1.1" 302 0
+INFO 2024-04-19 11:57:24,542 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/employee/ HTTP/1.1" 200 22540
+INFO 2024-04-19 11:57:24,581 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2024-04-19 11:57:30,140 Thread-4 (process_request_thread) 51260 basehttp basehttp.py 212 django.server log_message 568 "GET /api/admin/employees/ HTTP/1.1" 500 108870
+INFO 2024-04-19 11:57:36,735 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/employee/ HTTP/1.1" 200 25001
+INFO 2024-04-19 11:57:36,764 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:57:42,850 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/customuser/ HTTP/1.1" 200 13945
+INFO 2024-04-19 11:57:42,884 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:57:58,901 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "POST /admin/app/customuser/ HTTP/1.1" 200 8350
+INFO 2024-04-19 11:58:00,203 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "POST /admin/app/customuser/ HTTP/1.1" 302 0
+INFO 2024-04-19 11:58:00,264 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/customuser/ HTTP/1.1" 200 13361
+INFO 2024-04-19 11:58:00,317 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:58:04,489 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/employee/ HTTP/1.1" 200 25001
+INFO 2024-04-19 11:58:04,520 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 11:58:11,285 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "POST /admin/app/employee/ HTTP/1.1" 200 8829
+INFO 2024-04-19 11:58:12,791 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "POST /admin/app/employee/ HTTP/1.1" 302 0
+INFO 2024-04-19 11:58:12,872 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/employee/ HTTP/1.1" 200 22540
+INFO 2024-04-19 11:58:12,913 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2024-04-19 11:58:17,094 Thread-4 (process_request_thread) 51260 basehttp basehttp.py 212 django.server log_message 568 "GET /api/admin/employees/ HTTP/1.1" 500 109111
+INFO 2024-04-19 11:58:22,333 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/employee/ HTTP/1.1" 200 25001
+INFO 2024-04-19 11:58:22,366 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:00:08,275 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/app/employee/41/change/ HTTP/1.1" 200 14024
+INFO 2024-04-19 12:00:08,321 Thread-2 (process_request_thread) 73240 basehttp basehttp.py 212 django.server log_message 568 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:00:57,595 MainThread 71984 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 568 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:01:13,571 MainThread 67272 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 76668 Watching for file changes with StatReloader
+ERROR 2024-04-19 12:01:18,711 Thread-1 (process_request_thread) 68920 basehttp basehttp.py 212 django.server log_message 76668 "GET /api/admin/employees/ HTTP/1.1" 500 108590
+INFO 2024-04-19 12:01:29,561 MainThread 67272 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 76668 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:01:30,681 MainThread 55680 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 45960 Watching for file changes with StatReloader
+INFO 2024-04-19 12:01:44,103 MainThread 55680 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 45960 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:01:45,315 MainThread 73856 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 68776 Watching for file changes with StatReloader
+INFO 2024-04-19 12:02:19,883 Thread-1 (process_request_thread) 77972 basehttp basehttp.py 212 django.server log_message 68776 "GET /admin/app/employee/ HTTP/1.1" 200 25001
+INFO 2024-04-19 12:02:19,925 Thread-1 (process_request_thread) 77972 basehttp basehttp.py 212 django.server log_message 68776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:03:07,448 MainThread 73856 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 68776 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:03:08,498 MainThread 66124 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 69748 Watching for file changes with StatReloader
+INFO 2024-04-19 12:03:11,330 MainThread 66124 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 69748 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:03:12,187 MainThread 76308 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 54180 Watching for file changes with StatReloader
+INFO 2024-04-19 12:03:22,125 MainThread 76308 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 54180 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:03:23,002 MainThread 73396 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 70804 Watching for file changes with StatReloader
+INFO 2024-04-19 12:04:27,230 MainThread 73396 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 70804 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:04:28,279 MainThread 75156 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 51636 Watching for file changes with StatReloader
+INFO 2024-04-19 12:04:57,246 MainThread 75156 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 51636 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:04:58,512 MainThread 60152 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 34532 Watching for file changes with StatReloader
+INFO 2024-04-19 12:05:06,778 MainThread 60152 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 34532 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:05:07,959 MainThread 62812 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 75252 Watching for file changes with StatReloader
+INFO 2024-04-19 12:05:14,771 MainThread 62812 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 75252 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:05:15,676 MainThread 78400 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 64844 Watching for file changes with StatReloader
+INFO 2024-04-19 12:05:31,411 MainThread 78400 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 64844 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:05:32,393 MainThread 44016 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 66364 Watching for file changes with StatReloader
+INFO 2024-04-19 12:05:48,405 MainThread 44016 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 66364 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:05:49,386 MainThread 74996 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 65748 Watching for file changes with StatReloader
+INFO 2024-04-19 12:05:54,236 MainThread 74996 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 65748 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:05:55,148 MainThread 74388 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 71704 Watching for file changes with StatReloader
+INFO 2024-04-19 12:06:00,907 MainThread 74388 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 71704 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:06:01,810 MainThread 8704 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 73204 Watching for file changes with StatReloader
+INFO 2024-04-19 12:06:26,810 MainThread 8704 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 73204 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:06:28,225 MainThread 74660 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 47484 Watching for file changes with StatReloader
+INFO 2024-04-19 12:06:50,531 MainThread 74660 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 47484 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:06:51,563 MainThread 75924 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 44448 Watching for file changes with StatReloader
+INFO 2024-04-19 12:06:57,884 MainThread 75924 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 44448 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:06:58,816 MainThread 71120 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 74372 Watching for file changes with StatReloader
+INFO 2024-04-19 12:07:02,661 MainThread 71120 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 74372 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:07:03,539 MainThread 7528 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 66280 Watching for file changes with StatReloader
+INFO 2024-04-19 12:07:10,736 MainThread 7528 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 66280 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:07:11,674 MainThread 69388 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 73816 Watching for file changes with StatReloader
+INFO 2024-04-19 12:07:22,548 MainThread 69388 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 73816 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:07:23,472 MainThread 63068 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 56528 Watching for file changes with StatReloader
+INFO 2024-04-19 12:08:18,370 MainThread 63068 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 56528 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:08:19,421 MainThread 69136 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 76628 Watching for file changes with StatReloader
+INFO 2024-04-19 12:09:25,710 MainThread 69136 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 76628 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:09:26,882 MainThread 33640 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 69864 Watching for file changes with StatReloader
+INFO 2024-04-19 12:09:29,450 MainThread 33640 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 69864 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:09:30,466 MainThread 74940 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 69356 Watching for file changes with StatReloader
+INFO 2024-04-19 12:09:33,545 MainThread 74940 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 69356 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:09:34,439 MainThread 3340 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 67964 Watching for file changes with StatReloader
+ERROR 2024-04-19 12:09:37,966 Thread-1 (process_request_thread) 61572 basehttp basehttp.py 212 django.server log_message 67964 "GET /api/admin/employees/ HTTP/1.1" 500 110151
+INFO 2024-04-19 12:10:11,767 Thread-2 (process_request_thread) 74592 basehttp basehttp.py 212 django.server log_message 67964 "GET /admin/app/employee/ HTTP/1.1" 200 25001
+INFO 2024-04-19 12:10:52,597 Thread-2 (process_request_thread) 74592 basehttp basehttp.py 212 django.server log_message 67964 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:12:07,847 MainThread 64872 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 71228 Watching for file changes with StatReloader
+INFO 2024-04-19 12:12:37,325 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "POST /admin/app/employee/ HTTP/1.1" 200 9471
+INFO 2024-04-19 12:12:39,074 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "POST /admin/app/employee/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:12:39,209 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/ HTTP/1.1" 200 19705
+INFO 2024-04-19 12:12:39,256 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:12:45,360 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/29/change/ HTTP/1.1" 200 14077
+INFO 2024-04-19 12:12:45,408 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:12:49,255 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 304 0
+INFO 2024-04-19 12:12:53,473 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "POST /admin/app/employee/29/change/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:12:53,545 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/ HTTP/1.1" 200 19801
+INFO 2024-04-19 12:12:53,583 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:12:57,727 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/27/change/ HTTP/1.1" 200 14086
+INFO 2024-04-19 12:12:57,775 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:13:07,747 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "POST /admin/app/employee/27/change/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:13:07,824 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/ HTTP/1.1" 200 19817
+INFO 2024-04-19 12:13:07,864 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:13:11,987 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/26/change/ HTTP/1.1" 200 14086
+INFO 2024-04-19 12:13:12,030 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:13:18,858 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "POST /admin/app/employee/26/change/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:13:18,929 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/ HTTP/1.1" 200 19830
+INFO 2024-04-19 12:13:18,962 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:13:23,022 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/25/change/ HTTP/1.1" 200 14077
+INFO 2024-04-19 12:13:23,075 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:13:28,719 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "POST /admin/app/employee/25/change/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:13:28,791 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/ HTTP/1.1" 200 19839
+INFO 2024-04-19 12:13:28,851 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:13:32,608 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/24/change/ HTTP/1.1" 200 14077
+INFO 2024-04-19 12:13:32,645 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:13:57,163 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "POST /admin/app/employee/24/change/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:13:57,245 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/ HTTP/1.1" 200 19848
+INFO 2024-04-19 12:13:57,278 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:14:13,567 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "POST /admin/app/employee/ HTTP/1.1" 200 8982
+INFO 2024-04-19 12:14:14,791 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "POST /admin/app/employee/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:14:14,843 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/app/employee/ HTTP/1.1" 200 16376
+INFO 2024-04-19 12:14:14,871 Thread-1 (process_request_thread) 54608 basehttp basehttp.py 212 django.server log_message 71228 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:15:00,373 MainThread 64872 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 71228 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:15:01,663 MainThread 76524 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 57308 Watching for file changes with StatReloader
+INFO 2024-04-19 12:15:08,609 MainThread 76524 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 57308 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:15:09,584 MainThread 12716 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 69136 Watching for file changes with StatReloader
+INFO 2024-04-19 12:15:15,556 Thread-1 (process_request_thread) 69864 basehttp basehttp.py 212 django.server log_message 69136 "GET /api/admin/employees/ HTTP/1.1" 200 1287
+INFO 2024-04-19 12:16:11,137 MainThread 12716 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 69136 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:16:12,165 MainThread 74900 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 12224 Watching for file changes with StatReloader
+INFO 2024-04-19 12:16:26,599 MainThread 74900 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 12224 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:16:27,940 MainThread 61572 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 64200 Watching for file changes with StatReloader
+INFO 2024-04-19 12:16:34,182 MainThread 61572 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 64200 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:16:35,242 MainThread 73244 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 33292 Watching for file changes with StatReloader
+INFO 2024-04-19 12:16:39,423 MainThread 73244 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 33292 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:16:40,300 MainThread 71144 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 50808 Watching for file changes with StatReloader
+INFO 2024-04-19 12:16:48,563 MainThread 71144 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50808 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:16:49,705 MainThread 64772 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 53488 Watching for file changes with StatReloader
+INFO 2024-04-19 12:16:55,496 MainThread 64772 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 53488 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:16:56,706 MainThread 57768 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 78504 Watching for file changes with StatReloader
+INFO 2024-04-19 12:17:00,574 MainThread 57768 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 78504 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:17:01,631 MainThread 44216 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 15560 Watching for file changes with StatReloader
+INFO 2024-04-19 12:17:05,193 MainThread 44216 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 15560 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:17:06,286 MainThread 73812 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 11464 Watching for file changes with StatReloader
+INFO 2024-04-19 12:17:08,183 Thread-1 (process_request_thread) 70456 basehttp basehttp.py 212 django.server log_message 11464 "GET /api/admin/employees/ HTTP/1.1" 200 1287
+INFO 2024-04-19 12:17:37,792 MainThread 73812 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 11464 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:17:38,904 MainThread 77412 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 69200 Watching for file changes with StatReloader
+INFO 2024-04-19 12:17:43,701 MainThread 77412 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 69200 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:17:44,609 MainThread 68984 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 78480 Watching for file changes with StatReloader
+INFO 2024-04-19 12:17:48,108 MainThread 68984 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 78480 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:17:49,199 MainThread 62504 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 62084 Watching for file changes with StatReloader
+INFO 2024-04-19 12:17:58,530 MainThread 62504 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 62084 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:17:59,676 MainThread 52368 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 50464 Watching for file changes with StatReloader
+INFO 2024-04-19 12:18:05,846 MainThread 52368 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50464 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:18:06,697 MainThread 73620 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 57044 Watching for file changes with StatReloader
+INFO 2024-04-19 12:18:13,575 MainThread 73620 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 57044 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:18:14,654 MainThread 75696 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 64056 Watching for file changes with StatReloader
+INFO 2024-04-19 12:18:16,284 Thread-1 (process_request_thread) 50888 basehttp basehttp.py 212 django.server log_message 64056 "GET /api/admin/employees/ HTTP/1.1" 200 1287
+INFO 2024-04-19 12:19:01,858 MainThread 75696 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 64056 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:19:38,422 MainThread 33528 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 74796 Watching for file changes with StatReloader
+INFO 2024-04-19 12:19:41,576 Thread-1 (process_request_thread) 73552 basehttp basehttp.py 212 django.server log_message 74796 "GET /api/admin/employees/ HTTP/1.1" 200 1287
+INFO 2024-04-19 12:20:19,573 MainThread 33528 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 74796 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:20:59,251 MainThread 77828 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 69084 Watching for file changes with StatReloader
+ERROR 2024-04-19 12:21:05,104 Thread-1 (process_request_thread) 63144 basehttp basehttp.py 212 django.server log_message 69084 "GET /api/admin/employees/ HTTP/1.1" 500 150080
+INFO 2024-04-19 12:31:41,173 MainThread 77828 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 69084 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+WARNING 2024-04-19 12:35:26,785 Thread-1 (process_request_thread) 63144 basehttp basehttp.py 212 django.server log_message 69084 "GET /api/UserWithEmployeesList/ HTTP/1.1" 404 4071
+INFO 2024-04-19 12:36:00,327 MainThread 46536 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 73676 Watching for file changes with StatReloader
+INFO 2024-04-19 12:36:04,977 Thread-1 (process_request_thread) 74164 basehttp basehttp.py 212 django.server log_message 73676 "GET /api/users-with-employees/ HTTP/1.1" 200 1692
+INFO 2024-04-19 12:36:36,154 MainThread 46536 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 73676 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 12:37:22,327 MainThread 69580 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 69856 Watching for file changes with StatReloader
+INFO 2024-04-19 12:37:22,920 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/app/employee/39/change/ HTTP/1.1" 200 14033
+INFO 2024-04-19 12:37:22,962 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:37:38,171 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/app/employee/ HTTP/1.1" 200 16237
+INFO 2024-04-19 12:37:38,196 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:37:49,249 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/app/employee/26/change/ HTTP/1.1" 200 14105
+INFO 2024-04-19 12:37:49,275 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:38:21,049 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "POST /admin/app/employee/26/change/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:38:21,118 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/app/employee/ HTTP/1.1" 200 16453
+INFO 2024-04-19 12:38:21,167 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:38:29,965 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/app/employee/add/ HTTP/1.1" 200 13741
+INFO 2024-04-19 12:38:29,993 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:38:56,892 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "POST /admin/app/employee/add/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:38:56,918 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/app/employee/ HTTP/1.1" 200 17145
+INFO 2024-04-19 12:38:56,944 Thread-1 (process_request_thread) 34144 basehttp basehttp.py 212 django.server log_message 69856 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:39:04,599 Thread-5 (process_request_thread) 67516 basehttp basehttp.py 212 django.server log_message 69856 "GET /api/users-with-employees/ HTTP/1.1" 200 1855
+INFO 2024-04-19 12:48:47,965 MainThread 69580 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 69856 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 12:48:48,910 MainThread 68248 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 72612 Watching for file changes with StatReloader
+INFO 2024-04-19 12:48:53,229 MainThread 68248 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 72612 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 12:48:53,951 MainThread 71912 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 52060 Watching for file changes with StatReloader
+INFO 2024-04-19 12:49:02,248 Thread-1 (process_request_thread) 74428 basehttp basehttp.py 212 django.server log_message 52060 "GET /api/users-with-employees/ HTTP/1.1" 200 2073
+INFO 2024-04-19 12:51:46,726 MainThread 71912 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 52060 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 12:51:47,592 MainThread 37440 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 73404 Watching for file changes with StatReloader
+INFO 2024-04-19 12:51:52,150 MainThread 37440 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 73404 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 12:51:53,052 MainThread 57688 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 38756 Watching for file changes with StatReloader
+INFO 2024-04-19 12:51:58,156 Thread-1 (process_request_thread) 62292 basehttp basehttp.py 212 django.server log_message 38756 "GET /api/users-with-employees/ HTTP/1.1" 200 704
+INFO 2024-04-19 12:53:06,809 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/add/ HTTP/1.1" 200 13741
+INFO 2024-04-19 12:53:06,844 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:53:42,268 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "POST /admin/app/employee/add/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:53:42,306 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/ HTTP/1.1" 200 17835
+INFO 2024-04-19 12:53:42,340 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:53:45,346 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/add/ HTTP/1.1" 200 13741
+INFO 2024-04-19 12:53:45,375 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:54:10,220 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "POST /admin/app/employee/add/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:54:10,239 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/ HTTP/1.1" 200 18526
+INFO 2024-04-19 12:54:10,261 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:54:12,196 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/add/ HTTP/1.1" 200 13741
+INFO 2024-04-19 12:54:12,217 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:54:39,839 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "POST /admin/app/employee/add/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:54:39,859 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/ HTTP/1.1" 200 19219
+INFO 2024-04-19 12:54:39,882 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:54:43,221 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/add/ HTTP/1.1" 200 13741
+INFO 2024-04-19 12:54:43,245 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:55:08,312 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "POST /admin/app/employee/add/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:55:08,333 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/ HTTP/1.1" 200 19908
+INFO 2024-04-19 12:55:08,357 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:55:12,640 Thread-1 (process_request_thread) 62292 basehttp basehttp.py 212 django.server log_message 38756 "GET /api/users-with-employees/ HTTP/1.1" 200 815
+INFO 2024-04-19 12:57:20,276 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/add/ HTTP/1.1" 200 13741
+INFO 2024-04-19 12:57:20,299 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:57:32,213 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "POST /admin/app/employee/add/ HTTP/1.1" 302 0
+INFO 2024-04-19 12:57:32,232 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/app/employee/ HTTP/1.1" 200 20557
+INFO 2024-04-19 12:57:32,252 Thread-2 (process_request_thread) 71352 basehttp basehttp.py 212 django.server log_message 38756 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-04-19 12:57:36,128 Thread-1 (process_request_thread) 62292 basehttp basehttp.py 212 django.server log_message 38756 "GET /api/users-with-employees/ HTTP/1.1" 200 815
+INFO 2024-04-19 13:00:21,816 MainThread 57688 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 38756 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:00:22,643 MainThread 78360 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 2460 Watching for file changes with StatReloader
+INFO 2024-04-19 13:00:25,038 MainThread 78360 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 2460 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:00:25,632 MainThread 20952 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 50520 Watching for file changes with StatReloader
+INFO 2024-04-19 13:00:30,143 MainThread 20952 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50520 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:00:30,769 MainThread 66256 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 59232 Watching for file changes with StatReloader
+INFO 2024-04-19 13:00:34,745 Thread-1 (process_request_thread) 61516 basehttp basehttp.py 212 django.server log_message 59232 "GET /api/users-with-employees/ HTTP/1.1" 200 1085
+INFO 2024-04-19 13:05:07,805 MainThread 66256 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 59232 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:05:08,551 MainThread 69740 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 76704 Watching for file changes with StatReloader
+INFO 2024-04-19 13:05:15,002 MainThread 69740 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 76704 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:05:15,651 MainThread 71352 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 62292 Watching for file changes with StatReloader
+INFO 2024-04-19 13:05:17,671 MainThread 71352 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 62292 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:05:18,312 MainThread 66080 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 62068 Watching for file changes with StatReloader
+INFO 2024-04-19 13:06:36,374 MainThread 66080 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 62068 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:06:37,016 MainThread 54372 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 61616 Watching for file changes with StatReloader
+INFO 2024-04-19 13:06:51,603 Thread-1 (process_request_thread) 70084 basehttp basehttp.py 212 django.server log_message 61616 "GET /api/users-with-employees/ HTTP/1.1" 200 1315
+INFO 2024-04-19 13:08:36,090 MainThread 54372 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 61616 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:08:36,777 MainThread 57456 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 67284 Watching for file changes with StatReloader
+INFO 2024-04-19 13:08:46,291 MainThread 57456 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 67284 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:08:46,946 MainThread 61388 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 70200 Watching for file changes with StatReloader
+INFO 2024-04-19 13:09:11,440 MainThread 61388 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 70200 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:09:12,077 MainThread 65452 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 48952 Watching for file changes with StatReloader
+INFO 2024-04-19 13:09:14,153 MainThread 65452 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 48952 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:09:14,783 MainThread 73752 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 76388 Watching for file changes with StatReloader
+INFO 2024-04-19 13:09:16,813 MainThread 73752 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 76388 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:09:17,466 MainThread 78672 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 73836 Watching for file changes with StatReloader
+INFO 2024-04-19 13:09:24,810 MainThread 78672 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 73836 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:09:25,459 MainThread 15560 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 74468 Watching for file changes with StatReloader
+INFO 2024-04-19 13:09:27,497 MainThread 15560 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 74468 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:09:28,235 MainThread 77972 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 41300 Watching for file changes with StatReloader
+INFO 2024-04-19 13:10:00,282 MainThread 77972 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 41300 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:10:00,933 MainThread 77804 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 68180 Watching for file changes with StatReloader
+INFO 2024-04-19 13:10:19,315 MainThread 77804 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 68180 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:10:20,004 MainThread 72272 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 74156 Watching for file changes with StatReloader
+INFO 2024-04-19 13:10:32,598 MainThread 72272 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 74156 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:10:33,351 MainThread 71380 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 64256 Watching for file changes with StatReloader
+INFO 2024-04-19 13:10:40,365 MainThread 71380 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 64256 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:10:41,053 MainThread 51416 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 68644 Watching for file changes with StatReloader
+INFO 2024-04-19 13:10:51,846 MainThread 51416 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 68644 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:10:52,684 MainThread 65640 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 15048 Watching for file changes with StatReloader
+INFO 2024-04-19 13:11:00,154 MainThread 65640 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 15048 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:11:00,823 MainThread 61464 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 12424 Watching for file changes with StatReloader
+INFO 2024-04-19 13:11:52,037 MainThread 61464 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 12424 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:11:52,761 MainThread 56676 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 76440 Watching for file changes with StatReloader
+INFO 2024-04-19 13:12:05,465 MainThread 56676 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 76440 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:12:06,166 MainThread 64260 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 68140 Watching for file changes with StatReloader
+INFO 2024-04-19 13:12:09,228 MainThread 64260 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 68140 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:12:09,902 MainThread 61868 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 73252 Watching for file changes with StatReloader
+INFO 2024-04-19 13:12:19,436 MainThread 61868 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 73252 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:12:20,112 MainThread 62684 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 15332 Watching for file changes with StatReloader
+INFO 2024-04-19 13:12:24,337 MainThread 62684 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 15332 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:12:25,040 MainThread 59420 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 67728 Watching for file changes with StatReloader
+INFO 2024-04-19 13:12:34,647 MainThread 59420 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 67728 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:12:35,351 MainThread 74132 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 69536 Watching for file changes with StatReloader
+INFO 2024-04-19 13:12:59,996 MainThread 74132 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 69536 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:13:00,747 MainThread 51636 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 73856 Watching for file changes with StatReloader
+INFO 2024-04-19 13:13:03,952 MainThread 51636 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 73856 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:13:04,692 MainThread 25032 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 58464 Watching for file changes with StatReloader
+INFO 2024-04-19 13:13:08,959 MainThread 25032 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 58464 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:13:09,667 MainThread 7748 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 64032 Watching for file changes with StatReloader
+INFO 2024-04-19 13:13:14,965 MainThread 7748 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 64032 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:13:15,666 MainThread 77256 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 71284 Watching for file changes with StatReloader
+INFO 2024-04-19 13:13:18,763 MainThread 77256 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 71284 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:13:19,447 MainThread 48808 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 72664 Watching for file changes with StatReloader
+INFO 2024-04-19 13:13:29,002 MainThread 48808 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 72664 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:13:29,767 MainThread 53328 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 59744 Watching for file changes with StatReloader
+INFO 2024-04-19 13:13:31,918 MainThread 53328 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 59744 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:13:32,608 MainThread 59596 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 74940 Watching for file changes with StatReloader
+INFO 2024-04-19 13:13:35,663 MainThread 59596 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 74940 D:\New folder\newproject\attendanceSystem\app\serializers.py changed, reloading.
+INFO 2024-04-19 13:13:36,366 MainThread 78376 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 60276 Watching for file changes with StatReloader
+INFO 2024-04-19 13:14:50,866 MainThread 78376 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 60276 D:\New folder\newproject\attendanceSystem\app\views.py changed, reloading.
+INFO 2024-04-19 13:14:51,553 MainThread 15520 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 50168 Watching for file changes with StatReloader
+INFO 2024-04-19 13:16:34,870 MainThread 15520 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 50168 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-19 13:16:35,651 MainThread 75452 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 58944 Watching for file changes with StatReloader
+INFO 2024-04-19 13:16:45,423 MainThread 75452 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 58944 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-19 13:16:46,166 MainThread 65160 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 64168 Watching for file changes with StatReloader
+INFO 2024-04-19 13:16:56,903 MainThread 65160 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 64168 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-19 13:16:57,642 MainThread 17068 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 78316 Watching for file changes with StatReloader
+INFO 2024-04-19 13:17:00,853 MainThread 17068 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 78316 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-19 13:17:01,560 MainThread 68176 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 14120 Watching for file changes with StatReloader
+INFO 2024-04-19 13:17:04,713 MainThread 68176 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 14120 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-19 13:17:05,391 MainThread 76432 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 63036 Watching for file changes with StatReloader
+INFO 2024-04-19 13:17:11,708 MainThread 76432 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 63036 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-19 13:17:12,416 MainThread 69084 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 64900 Watching for file changes with StatReloader
+INFO 2024-04-19 13:17:15,502 MainThread 69084 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 64900 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-19 13:17:16,217 MainThread 78132 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 62120 Watching for file changes with StatReloader
+INFO 2024-04-19 13:17:20,389 MainThread 78132 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 62120 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-19 13:17:21,121 MainThread 71340 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 70936 Watching for file changes with StatReloader
+INFO 2024-04-19 13:17:34,666 MainThread 42112 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 74884 Watching for file changes with StatReloader
+INFO 2024-04-19 13:18:00,564 MainThread 42112 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 74884 D:\New folder\newproject\attendanceSystem\app\urls.py changed, reloading.
+INFO 2024-04-19 13:18:12,568 MainThread 57732 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 74896 Watching for file changes with StatReloader
+INFO 2024-04-19 13:18:30,269 Thread-1 (process_request_thread) 44740 basehttp basehttp.py 212 django.server log_message 74896 "GET /api/users-with-employees/ HTTP/1.1" 200 1315
+INFO 2024-04-19 13:24:23,969 MainThread 57732 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 74896 D:\New folder\newproject\attendanceSystem\attendanceSystem\settings.py changed, reloading.
+INFO 2024-04-19 13:24:24,823 MainThread 74620 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 47412 Watching for file changes with StatReloader
+INFO 2024-04-19 13:24:29,119 MainThread 74620 autoreload autoreload.py 266 django.utils.autoreload trigger_reload 47412 D:\New folder\newproject\attendanceSystem\attendanceSystem\settings.py changed, reloading.
+INFO 2024-04-19 13:24:29,932 MainThread 68592 autoreload autoreload.py 668 django.utils.autoreload run_with_reloader 47732 Watching for file changes with StatReloader

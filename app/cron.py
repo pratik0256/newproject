@@ -30,5 +30,18 @@ def notification():
             if duration_hours >= 8:
                 logger.info(f"Cron job ran for {duration_hours} hours, exceeding the base threshold of hours.")
                 send_checkout_reminder_email(employee)
+                
+def is_weekday(date):
+    return date.weekday() < 5  # 0 to 4 represent Monday to Friday
+                
+def add_default_none():
+    today = timezone.now().date()
+    if is_weekday(today):
+        users_ids = Employee.objects.values_list('user', flat=True).distinct()
+        for user_id in users_ids:
+            if not Employee.objects.filter(user_id=user_id, created_date=today).exists():
+                Employee.objects.create(user_id=user_id, created_date=today)
+    else:
+        pass
 
 

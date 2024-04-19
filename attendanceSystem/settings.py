@@ -216,9 +216,12 @@ LOGGING = {
     "loggers": LOGGERS[0],
 }
 
+
 CRONJOBS = [
-    ('*/1 * * * *', 'app.cron.notification')
+    ('*/1 * * * *', 'app.cron.notification'),  # Runs every minute
+    ('0 16 * * *', 'app.cron.add_default_none'),  # Runs at 4 PM daily
 ]
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
